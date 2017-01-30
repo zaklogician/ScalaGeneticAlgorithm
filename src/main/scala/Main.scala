@@ -18,8 +18,7 @@ object Main {
     
     // the fitness is the number of characters we got right
     def fitnessFn(individual: Individual): Double = {
-      val result = individual.mkString
-      (individual,"hello").zipped.count(p => p._1 == p._2).toDouble
+      (individual,"hello").zipped.count(c => c._1 == c._2).toDouble
     }
         
     val populationSize: Int = 100
